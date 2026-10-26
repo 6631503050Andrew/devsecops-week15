@@ -78,4 +78,4 @@ def admin():
 
 if __name__ == "__main__":
     # Port 8091 (pairs with the insecure service on 8090).
-    app.run(host="0.0.0.0", port=8091, debug=False)
+    app.run(host="0.0.0.0", port=8091, debug=False)  # nosemgrep: python.flask.security.audit.app-run-param-config.avoid_app_run_with_bad_host -- intentional: lab demo binds all interfaces for Docker reachability; scan-only here
